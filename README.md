@@ -30,6 +30,7 @@ The focus is narrow on purpose. Most "dashboard" repos on GitHub are either serv
 
 **Frontend / Display Layer**
 - [Situational Awareness & Geopol Dashboards](#situational-awareness--geopol-dashboards)
+- [Hosted Live Situational Dashboards](#hosted-live-situational-dashboards)
 - [News Grids & Composite Feed Dashboards](#news-grids--composite-feed-dashboards)
 - [Dashboard Frameworks for Custom Builds](#dashboard-frameworks-for-custom-builds)
 - [UI Kits & Layout Primitives](#ui-kits--layout-primitives)
@@ -48,6 +49,19 @@ The focus is narrow on purpose. Most "dashboard" repos on GitHub are either serv
 - [Kiosk Mode & Remote Device Management](#kiosk-mode--remote-device-management)
 - [Live TV / IPTV Tiles](#live-tv--iptv-tiles)
 - [Common Operational Picture (COP)](#common-operational-picture-cop)
+
+**Commercial / SaaS Reference Stack**
+- [Newswires & Primary Feeds](#newswires--primary-feeds)
+- [Real-Time Event Detection (Gov / Newsroom Grade)](#real-time-event-detection-gov--newsroom-grade)
+- [Media Monitoring & PR Intelligence](#media-monitoring--pr-intelligence)
+- [Social Listening & Narrative Analytics](#social-listening--narrative-analytics)
+- [Broadcast / TV Monitoring](#broadcast--tv-monitoring)
+- [OSINT & Intel Fusion Platforms](#osint--intel-fusion-platforms)
+- [Crisis & Duty-of-Care Intelligence](#crisis--duty-of-care-intelligence)
+- [Geospatial & Satellite Layers](#geospatial--satellite-layers)
+- [Video Wall / Control Room Hardware & CMS](#video-wall--control-room-hardware--cms)
+- [Commercial Digital Signage](#commercial-digital-signage)
+- [Mass Notification / Alerting](#mass-notification--alerting)
 
 ---
 
@@ -158,6 +172,66 @@ World-events monitoring dashboard with news and map layers.
 Global news / world-view dashboard aggregating geopolitical signals.
 
 [![View Repo](https://img.shields.io/badge/View-Repo-blue?style=flat&logo=github)](https://github.com/Prathewsh/worldview)
+
+---
+
+## Hosted Live Situational Dashboards
+
+Free / open-access live dashboards already running in production — not GitHub repos but worth indexing here as reference implementations of the "what a watch-floor tile actually looks like" archetype. Many are OSINT-positioned, aggregate public feeds (news, flight/AIS, prediction markets, sentiment), and refresh on short intervals. Useful as design references and as live tiles to embed in your own wall.
+
+### SitDeck
+
+Broad OSINT situational-awareness dashboard — 180+ data feeds and 55+ widgets spanning conflicts, earthquakes, and markets. Freemium with AI-analyst tiers.
+
+[![View Site](https://img.shields.io/badge/View-Site-green?style=flat)](https://sitdeck.com/)
+
+### MediaThrive WatchTower
+
+Real-time global news-intelligence dashboard pitched at newsrooms — breaking news, conflicts, markets, and cyber threats in one view.
+
+[![View Site](https://img.shields.io/badge/View-Site-green?style=flat)](https://mediathrive.com/watchtower)
+
+### World Monitor
+
+Multilingual OSINT dashboard fusing news, markets, military / flight / AIS tracking, infrastructure, and geopolitical data. BYOK AI; Pro tier on waitlist.
+
+[![View Site](https://img.shields.io/badge/View-Site-green?style=flat)](https://www.worldmonitor.app/)
+
+### Iran Monitor (iranmonitor.org)
+
+Iran-focused OSINT dashboard — news sentiment, X/Twitter feeds, flight radar, prediction markets, internet-connectivity metrics.
+
+[![View Site](https://img.shields.io/badge/View-Site-green?style=flat)](https://www.iranmonitor.org/)
+
+### StrikeRadar
+
+Single-purpose risk gauge estimating US-strike-on-Iran probability from news, aviation, tankers, Polymarket, and the Pentagon Pizza Meter. 30-min refresh — a clean example of a one-question dashboard.
+
+[![View Site](https://img.shields.io/badge/View-Site-green?style=flat)](https://usstrikeradar.com/)
+
+### US-Iran Live
+
+Iran–US conflict news-aggregation dashboard with live map; tracks sanctions, nuclear, and military developments. ~3-minute refresh.
+
+[![View Site](https://img.shields.io/badge/View-Site-green?style=flat)](https://usairanlive.com/)
+
+### IranWarRoom
+
+Iran-conflict intelligence dashboard with vessel/aircraft tracking, defense-stock data, news feeds, and AI threat analysis. Multilingual, ad-supported.
+
+[![View Site](https://img.shields.io/badge/View-Site-green?style=flat)](https://iranwarroom.com/)
+
+### MissileStrikes
+
+US–Israel–Iran missile-conflict dashboard — 17 tabs covering strike map, interceptor burn rates, arsenals, cost ratios, and supply-chain analytics.
+
+[![View Site](https://img.shields.io/badge/View-Site-green?style=flat)](https://missilestrikes.com/ar/)
+
+### Iran Monitor (iranmonitor.online)
+
+Independent Iran OSINT dashboard built on Base44 — news sentiment, X feeds, flight radar, prediction markets, internet connectivity.
+
+[![View Site](https://img.shields.io/badge/View-Site-green?style=flat)](https://iranmonitor.online/)
 
 ---
 
@@ -564,6 +638,145 @@ Projects explicitly framed as COP / shared-ops-picture tools — the doctrinal t
 UK Special Forces Task Association common-operational-picture project.
 
 [![View Repo](https://img.shields.io/badge/View-Repo-blue?style=flat&logo=github)](https://github.com/UKSFTA/UKSFTA-COP)
+
+---
+
+# Commercial / SaaS Reference Stack
+
+Everything above is open-source. But if you walked onto a foreign-ministry watch floor, a major-network newsroom, a corporate Global Security Operations Center (GSOC), or an NGO crisis cell, the screens would mostly be driven by **proprietary SaaS** — because the valuable bit is the licensed content (newswires, broadcast feeds, social firehose access) and the real-time event-detection models trained on it, not the UI.
+
+This section catalogues the commercial layer so the OSS index above can be read as "what you'd self-build or augment with" rather than "what a professional shop actually uses end-to-end." Inclusion is descriptive, not endorsement; pricing is typically enterprise-quote and access often gated by sector (gov, Fortune 500, accredited media).
+
+## Newswires & Primary Feeds
+
+The licensed source material that ultimately populates most of the tiles. Direct ingestion (via API / NITF / NewsML / RSS with auth) is common on gov and newsroom walls.
+
+- **[Reuters Connect](https://www.reutersagency.com/en/reuters-connect/)** — Reuters' modern delivery platform; text, video, pictures, graphics, plus partner agencies.
+- **[Associated Press (AP) Newsroom / AP Hub](https://www.ap.org/)** — AP's wire, photo, and video delivery; deep penetration in US newsrooms and embassies.
+- **[Agence France-Presse (AFP)](https://www.afp.com/en/agency/afp-services)** — AFP Forum / ImageForum; strong on global and francophone coverage.
+- **[Bloomberg Terminal](https://www.bloomberg.com/professional/products/bloomberg-terminal/)** — The canonical financial-intel terminal; BN wire, TOPLive, and chat are heavily used by policy and markets desks.
+- **[Dow Jones Newswires / Factiva](https://www.dowjones.com/professional/factiva/)** — Real-time wires plus Factiva's licensed archive of ~33,000 sources.
+- **[LexisNexis Nexis Newsdesk](https://www.lexisnexis.com/en-us/professional/media-monitoring/nexis-newsdesk.page)** — Licensed news archive + real-time monitoring, common in gov / legal / policy shops.
+- **[EBU News Exchange](https://www.ebu.ch/news-exchange)** — European Broadcasting Union's video-news exchange; a backbone feed for public broadcasters.
+- **[Kyodo News](https://english.kyodonews.net/)**, **[Xinhua](http://www.xinhuanet.com/english/)**, **[TASS](https://tass.com/)** — Regional wires that watch-floors subscribe to for source-country framing.
+
+## Real-Time Event Detection (Gov / Newsroom Grade)
+
+First-alert products that sit *in front of* the wires — they ingest social, dark web, sensor, and wire data and surface breaking events with minutes-to-hours of lead time. This is the category where newsrooms and gov ops centers spend serious money.
+
+- **[Dataminr Pulse / First Alert](https://www.dataminr.com/)** — The market leader for real-time alerting from public data. First Alert is the public-sector/news SKU; Pulse is the corporate-risk SKU. De facto standard on network-news assignment desks and many watch floors.
+- **[Factal](https://www.factal.com/)** — Editor-verified breaking-event feed built for multinationals, NGOs, and newsrooms; strong signal-to-noise.
+- **[Samdesk](https://samdesk.io/)** — AI-driven crisis detection from social; widely used by airlines, resorts, and corporate security.
+- **[NewsWhip Spike](https://www.newswhip.com/)** — Predictive engagement signal — surfaces which stories are about to go viral, not just which are trending.
+- **[Signal AI](https://www.signal-ai.com/)** — "Decision augmentation" platform; media + regulatory + reputational monitoring with entity graphs.
+- **[Liferaft Navigator](https://liferaftinc.com/)** — OSINT / threat monitoring aimed at corporate GSOCs.
+
+## Media Monitoring & PR Intelligence
+
+The PR/comms-facing monitoring stack. Overlaps with the categories above but is explicitly framed around earned-media measurement, sentiment, and share of voice.
+
+- **[Meltwater](https://www.meltwater.com/)** — Broad media intelligence suite — news, social, broadcast, influencer.
+- **[Cision](https://www.cision.com/) / [CisionOne](https://www.cision.com/products/cisionone/)** — Monitoring + media database + distribution; heavyweight in corporate comms.
+- **[Onclusive](https://onclusive.com/)** — Formed from Kantar Reputation Intelligence, PRgloo, and Critical Mention; full-stack PR analytics.
+- **[Muck Rack](https://muckrack.com/)** — Journalist-database-first monitoring; strong with modern PR teams.
+- **[Agility PR Solutions](https://www.agilitypr.com/)** — Mid-market monitoring + outreach.
+- **[Notified (formerly PR Newswire)](https://www.notified.com/)** — Distribution + monitoring + IR comms.
+- **[CARMA](https://carma.com/)** — Human-coded media analysis — still common where nuance/sentiment accuracy matters more than throughput.
+
+## Social Listening & Narrative Analytics
+
+Firehose-grade social monitoring — what watch floors use to track narratives, disinfo, and on-the-ground sentiment.
+
+- **[Brandwatch (Cision)](https://www.brandwatch.com/)** — Consumer research + crisis + influencer; one of the two dominant players.
+- **[Talkwalker (Hootsuite)](https://www.talkwalker.com/)** — The other one; strong image/video recognition and broadcast integration.
+- **[Sprinklr Insights](https://www.sprinklr.com/products/insights/)** — Unified CX/social platform; used at enterprise scale.
+- **[Meltwater Social (ex-Sysomos / Linkfluence)](https://www.meltwater.com/en/products/social-media-monitoring)** — Social tier of the Meltwater suite.
+- **[Synthesio (Ipsos)](https://www.synthesio.com/)** — Research-oriented social listening.
+- **[Pulsar](https://www.pulsarplatform.com/)** — Audience intelligence and narrative tracking; popular with comms strategy teams.
+- **[NewsWhip](https://www.newswhip.com/)** — Listed again here for its cross-platform virality scoring.
+- **[Graphika](https://www.graphika.com/)** — Network-graph analysis of online communities; used heavily on influence-operations work.
+- **[Logically](https://www.logically.ai/)**, **[Blackbird.AI](https://www.blackbird.ai/)**, **[Alethea](https://www.alethea.com/)** — Disinfo / narrative-threat platforms — the "CT for information ops" tier, common in MFA and election-integrity contexts.
+
+## Broadcast / TV Monitoring
+
+Watching linear TV and radio is still a first-class requirement on any serious watch floor; these services index broadcast with ASR + OCR and expose clip search + alerts.
+
+- **[TVEyes](https://tveyes.com/)** — The standard broadcast-monitoring service — searchable TV/radio transcripts across thousands of channels, real-time alerts, clip export.
+- **[Critical Mention (Onclusive)](https://www.criticalmention.com/)** — Broadcast monitoring + earned-media analytics.
+- **[SnapStream](https://www.snapstream.com/)** — On-prem/hybrid TV recording + search; used in newsrooms and political war rooms.
+- **[Kantar Media](https://www.kantarmedia.com/)** — Broadcast intelligence at agency scale.
+
+## OSINT & Intel Fusion Platforms
+
+The commercial analogues to OpenCTI / MediaCloud — full fusion stacks, often ITAR-tier or gov-restricted.
+
+- **[Palantir Gotham / Foundry / MetaConstellation](https://www.palantir.com/)** — The archetype of a gov-grade intel-fusion platform; common across defence, MFA-equivalents, and homeland security.
+- **[Recorded Future](https://www.recordedfuture.com/)** — Temporal analytics over open + dark + technical sources; widely deployed in CTI and geopolitical-risk functions.
+- **[Babel Street](https://www.babelstreet.com/)** — Multilingual OSINT + identity intelligence; heavy LE and gov footprint.
+- **[Flashpoint](https://flashpoint.io/)** — Deep/dark-web intel + physical security convergence.
+- **[Fivecast](https://www.fivecast.com/)** — OSINT platform with risk scoring; used across Five Eyes.
+- **[PenLink (formerly Cobwebs)](https://www.penlink.com/)** — Web-intelligence + lawful-intercept analytics.
+- **[Echosec (Flashpoint)](https://www.echosec.net/)** — Geospatial social / dark-web search.
+- **[ShadowDragon](https://shadowdragon.io/)** — OSINT tradecraft tooling — SocialNet, Horizon.
+- **[Maltego](https://www.maltego.com/)** — Graph-based investigation platform; commercial tiers with TI transforms.
+- **[GDELT (reference, free)](https://www.gdeltproject.org/)** — Not SaaS, but the default commercial-grade event dataset referenced by nearly every platform above.
+
+## Crisis & Duty-of-Care Intelligence
+
+The travel-risk / employee-safety / crisis-ops tier — overlaps with event detection but oriented around assets and people, not narratives.
+
+- **[Everbridge Visual Command Center + Risk Intelligence (ex-NC4)](https://www.everbridge.com/)** — The reference platform for corporate GSOCs; fuses risk events with asset/personnel locations.
+- **[Crisis24 (GardaWorld) Horizon](https://crisis24.garda.com/)** — Analyst-written intel + real-time alerts; ex-iJET / WorldAware / Drum Cussac lineage.
+- **[International SOS TravelTracker / Tracker](https://www.internationalsos.com/)** — Medical + security duty-of-care standard.
+- **[Riskline](https://www.riskline.com/)**, **[Sitata](https://www.sitata.com/)**, **[Safeture](https://safeture.com/)**, **[AlertMedia Global Intelligence](https://www.alertmedia.com/)** — Mid-market duty-of-care feeds and platforms.
+- **[BlueDot](https://bluedot.global/)** — Epidemic / biological-event intelligence — called the 2019 Wuhan outbreak before WHO.
+- **[Control Risks Seerist / CORE](https://www.controlrisks.com/)** — Geopolitical-risk advisory with a productised feed.
+
+## Geospatial & Satellite Layers
+
+The map layer behind every "where is this happening" tile.
+
+- **[Esri ArcGIS Online / ArcGIS Dashboards](https://www.esri.com/en-us/arcgis/products/arcgis-dashboards/overview)** — The dominant gov GIS stack; most COVID-era public dashboards (JHU, many MoH sites) ran on it.
+- **[Mapbox](https://www.mapbox.com/)** — Commercial map tiles + Studio; default for custom branded maps.
+- **[Google Maps Platform](https://mapsplatform.google.com/)** — Ubiquitous embeds; Premium/Enterprise tier for higher quotas.
+- **[HERE](https://www.here.com/)**, **[TomTom Orbis](https://www.tomtom.com/products/orbis-maps/)** — Gov- and automotive-grade mapping alternatives.
+- **[Planet Labs](https://www.planet.com/)** — Daily-refresh satellite imagery — the standard reference for monitoring physical ground-truth.
+- **[Maxar](https://www.maxar.com/)** — High-resolution commercial satellite imagery.
+- **[BlackSky](https://www.blacksky.com/)**, **[ICEYE](https://www.iceye.com/)** — Rapid-revisit optical and SAR respectively; increasingly on watch-floor map layers.
+- **[HawkEye 360](https://www.he360.com/)** — RF geolocation — emitter tracking as a commercial product.
+- **[Dataminr × Planet / Maxar integrations]** — Increasingly the pattern: event-detection product calls out to imagery provider for confirmation tiles.
+
+## Video Wall / Control Room Hardware & CMS
+
+The physical "large screens" you asked to work back from are driven by a small number of specialist control-room vendors. A dashboard isn't a video wall until something is driving the pixels across N displays with failover.
+
+- **[Userful](https://www.userful.com/)** — Software-defined video-wall / control-room platform — common in security and ops centers.
+- **[VuWall](https://vuwall.com/)** — AV-over-IP video-wall management + KVM.
+- **[Haivision](https://www.haivision.com/) (incl. CineMassive, Kraken)** — Mission-critical AV + low-latency streaming; deep gov/mil footprint.
+- **[Barco TransForm N / CMS / UniSee](https://www.barco.com/en/control-rooms)** — LCD / LED video walls and the networked CMS behind them.
+- **[Christie Phoenix / Spyder / Terra](https://www.christiedigital.com/products/control-rooms/)** — Projection + AV-over-IP for very large rooms.
+- **[RGB Spectrum](https://www.rgb.com/)**, **[Datapath](https://www.datapath.co.uk/)**, **[Extron](https://www.extron.com/)**, **[Crestron](https://www.crestron.com/)** — Video-wall processors, capture cards, and control systems.
+- **[Jupiter Systems (Planar)](https://www.jupiter.com/)** — Canvas / Pana — long-running video-wall CMS.
+
+## Commercial Digital Signage
+
+When the requirement is "N identical news walls, centrally managed" rather than a bespoke ops center.
+
+- **[BrightSign](https://www.brightsign.biz/)** — Purpose-built signage players — the most deployed commercial endpoint.
+- **[Scala (STRATACACHE)](https://scala.com/)** — Enterprise signage CMS.
+- **[Navori](https://www.navori.com/)**, **[Signagelive](https://signagelive.com/)**, **[Yodeck](https://www.yodeck.com/)** — Mid-market signage CMS with RSS/news widgets.
+- **[Poppulo (formerly Four Winds Interactive)](https://www.poppulo.com/)** — Internal-comms + signage platform, common in corporate lobbies and EOCs.
+- **[Screenly (commercial)](https://www.screenly.io/)** — Hosted tier above the Anthias OSS lineage.
+
+## Mass Notification / Alerting
+
+When an event crosses a threshold on the wall, these platforms push it out to people.
+
+- **[Everbridge Mass Notification](https://www.everbridge.com/products/mass-notification/)** — Gov + enterprise standard for multi-channel alerting; often the downstream of Visual Command Center.
+- **[AlertMedia](https://www.alertmedia.com/)** — Modern employee-safety + mass-comms platform.
+- **[OnSolve](https://www.onsolve.com/)** — Critical-event management (ex-CodeRED, Send Word Now).
+- **[Rave Mobile Safety (Motorola)](https://www.ravemobilesafety.com/)** — Heavy in public sector / higher-ed.
+- **[Regroup Mass Notification](https://www.regroup.com/)** — Mid-market alternative.
 
 ---
 
