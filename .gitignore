@@ -1,0 +1,4 @@
+/private/
+.env
+.env.*
+.DS_Store
