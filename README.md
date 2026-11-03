@@ -1,5 +1,7 @@
 # Monitoring The Situation
 
+**Write-up:** [My curated AI indexes on GitHub: what each list covers](https://blog.danielrosehill.com/posts/curated-ai-indexes-awesome-lists-agents-evals-voice-au87cm/)
+
 A curated index of open-source projects for building **command-center style news monitoring dashboards** — the kind you'd see in a government watch-floor, newsroom video wall, or crisis ops center tracking breaking events rather than server metrics.
 
 **Last Updated:** April 2026
